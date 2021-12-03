@@ -1,0 +1,16 @@
+{
+  "name": "developer-to-go",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1",
+    "express-session": "^1.16.1",
+    "mongoose": "^5.10.13"
+  }
+}
