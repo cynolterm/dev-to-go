@@ -7,3 +7,5 @@ You have to build the react project to to make the Node.JS server be able to ser
 To test the react app with live reloading, type **npm start**
 
 Type: **npm run start** into the command line in the main project.
+
+Note: You need mongoDB server installed on your computers
