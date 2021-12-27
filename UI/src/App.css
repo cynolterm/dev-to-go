@@ -36,3 +36,69 @@
     transform: rotate(360deg);
   }
 }
+
+.dev-to-go-login-popup {
+  width: 500px !important;
+  height: 250px;
+  position: absolute;
+  z-index: 10;
+  top: 200px;
+  left: 800px;
+  background-color: gray;
+  display: block !important;
+}
+
+.dev-to-go-login-popup button {
+  height: max-content;
+  padding: 0.5rem;
+}
+
+.dev-to-go-login-popup div {
+  height: max-content;
+  padding: 0.5rem;
+  font-weight: 800;
+  font-size: large;
+}
+
+.dev-to-go-login-popup .login-header{
+  width: 95%;
+  display: flex;
+  height: max-content;
+  justify-content: space-between;
+  flex-direction: row;
+}
+
+.dev-to-go-login-popup-closed {
+  display: none !important;
+}
+
+
+.dev-to-go-login-popup .login-body{
+  width: 100%;
+  display: block;
+}
+
+.dev-to-go-login-popup .login-body .inputrow{
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+}
+
+.dev-to-go-login-popup .login-body .inputrow span {
+  padding-right: 10px;
+}
+
+.dev-to-go-login-popup .login-footer {
+  width: 100%;
+  display: block;
+}
+
+.dev-to-go-login-popup .login-footer .button-container {
+  display: flex;
+  width: 95%;
+  justify-content: end;
+}
+
+.dev-to-go-login-popup .login-footer .button-container button {
+  margin-left: 5px;
+}

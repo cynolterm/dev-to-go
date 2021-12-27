@@ -1,14 +1,16 @@
 import logo from './logo.svg';
 import './App.css';
 import DevToGoHeader from './header';
+import Content from "./Content"
 
-function App() {
+const App = props => {
   return (
     <div className="App">
       <DevToGoHeader></DevToGoHeader>
-      <div>
-        <h1>Hello world</h1>
-      </div>
+      <Content>
+        {props.children}
+      </Content>
+      
     </div>
   );
 }
