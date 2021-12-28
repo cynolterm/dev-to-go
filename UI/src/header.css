@@ -17,3 +17,7 @@
     display: flex;
     width: max-content;
 }
+
+.user {
+    display:none;
+}

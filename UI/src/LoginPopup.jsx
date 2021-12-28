@@ -6,7 +6,9 @@ class LoginPopup extends React.Component {
     
     constructor(props) {
         super(props);
-        console.log(props)
+        document.addEventListener("openLoginPopup", (event) => {
+            this.openPopup();
+        })
     }
     
     state = {
@@ -17,14 +19,20 @@ class LoginPopup extends React.Component {
 
     closePopup = () => {
         this.setState({popupClass: "dev-to-go-login-popup-closed"})
+        this.props.openVariable = false;
         console.log(`Username: ${this.state.username}`)
         console.log(`Password: ${this.state.password}`)
     }
 
     componentDidUpdate = (props) => {
-        if (this.props.openVariable !== props.openVariable) {
-            this.setState({popupClass: "dev-to-go-login-popup"})
-        }
+        // console.log(this.props.openVariable);
+        // if (this.props.openVariable !== props.openVariable && this.props.openVariable === true) {
+        //     this.setState({popupClass: "dev-to-go-login-popup"})
+        // }
+    }
+
+    openPopup = () => {
+        this.setState({popupClass: "dev-to-go-login-popup"});
     }
 
     registerClicked = () => {
@@ -50,6 +58,7 @@ class LoginPopup extends React.Component {
             processData: false
         }).then(response =>{
             this.closePopup();
+            document.dispatchEvent(new CustomEvent("userLoggedIn", {detail: {user: response.user}}));
         }).catch(error => {
             console.error(error)
         })

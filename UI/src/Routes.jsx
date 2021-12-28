@@ -1,17 +1,20 @@
 import React from "react";
-import { Route, Switch } from "react-router-dom";
+import { Route, Routes,  BrowserRouter } from "react-router-dom";
 
 import App from "./App";
 import MainPage from "./MainPage";
 import UserPage from "./UserPage";
+import DevToGoHeader from "./header";
 
-const Routes = () => (
+const DevToGoRoutes = () => (
     <App>
-        <Switch>
-            <Route path="/" component={MainPage} exact />
-            <Route path="/user" component={UserPage} exact />
-        </Switch>
+        <BrowserRouter>
+            <Routes>
+                <Route path="/" element={<MainPage/>}/>
+                <Route path="user" element={<UserPage/>}/>
+            </Routes>
+        </BrowserRouter>
     </App>
 )
 
-export default Routes;
+export default DevToGoRoutes;

@@ -16,7 +16,7 @@ module.exports = function (objectrepository) {
                 return next(err);
             }
 
-            res.json({"token": "token"})
+            res.json({"token": "token", "user": user});
             return;
         });
     };

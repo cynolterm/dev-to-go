@@ -1,7 +1,7 @@
 module.exports = function (objectrepository) {
 
     return function(req, res, next) {
-        res.json(user);
+        res.json(res.locals.user);
         return;
     };
 };

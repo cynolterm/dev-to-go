@@ -1,0 +1,50 @@
+.developer-row {
+    width: 80vw;
+    height: 3rem;
+    border-width: 3px;
+    border-color: black;
+    border-style: solid;
+    margin-bottom: -3px;
+    display: flex;
+    justify-content: flex-start;
+}
+
+.developer-row .developer-name {
+    width: 20%;
+    border-width: 0px 3px 0px 0px;
+    border-color: black;
+    border-style: solid;
+    text-align: left;
+    line-height: 3rem;
+    padding-left: 10px;
+    text-transform: capitalize;
+}
+
+.developer-row .developer-location {
+    width: 20%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    border-width: 0px 3px 0px 0px;
+    border-color: black;
+    border-style: solid;
+    text-align: left;
+    line-height: 3rem;
+    padding-left: 10px;
+    text-transform: capitalize;
+}
+
+.developer-row .developer-skills {
+    width: 60%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    text-align: left;
+    line-height: 3rem;
+    padding-left: 10px;
+    text-transform: capitalize;
+}
+
+.developer-row .developer-skills span{
+    padding-right: 10px;
+}

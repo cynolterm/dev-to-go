@@ -19,12 +19,12 @@ module.exports = function (objectrepository) {
             res.locals.user.location = "";
             res.locals.user.name = "";
             res.locals.user.description = "";
-            res.locals.user.wage = "";
+            res.locals.user.wage = 0;
             res.locals.user.contact = "";
         }
 
         if (req.body.skills) {
-            let temp = req.body.skills.split(";")
+            let temp = req.body.skills.split(",")
             res.locals.user.skills.push({Name: temp[0], Level: temp[1]});
             res.locals.user.developer = true;
         }
@@ -42,7 +42,7 @@ module.exports = function (objectrepository) {
         }
 
         if (req.body.wage) {
-            res. locals.user.wage = req.body.wage;
+            res. locals.user.wage = parseInt(req.body.wage);
         }
 
         if (req.body.contact) {

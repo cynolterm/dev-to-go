@@ -102,3 +102,11 @@
 .dev-to-go-login-popup .login-footer .button-container button {
   margin-left: 5px;
 }
+
+.developer-container {
+  position: absolute;
+  top: 25vh;
+  left: 10vw;
+  overflow-y: scroll;
+  height: 70vh;
+}
