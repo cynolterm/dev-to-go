@@ -9,8 +9,16 @@ module.exports = function (objectrepository) {
                 res.json({"error": err})
             }
 
-            res.locals.users = users;
-            res.json({"users": users});
+            let developers = [];
+            users.map(user => {
+                if(user.developer) {
+                    user.password = "";
+                    developers.push(user)
+                }
+            });
+
+            res.locals.users = developers;
+            res.json({"users": developers});
         });
     };
 };

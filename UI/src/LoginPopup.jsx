@@ -1,14 +1,18 @@
 import React from "react";
 import "./App.css";
 import $ from "jquery";
+import { LoginManager } from "./loginManager";
 
 class LoginPopup extends React.Component {
     
+    loginManager;
+
     constructor(props) {
         super(props);
         document.addEventListener("openLoginPopup", (event) => {
             this.openPopup();
         })
+        this.loginManager = LoginManager.getInstance();
     }
     
     state = {
@@ -58,6 +62,7 @@ class LoginPopup extends React.Component {
             processData: false
         }).then(response =>{
             this.closePopup();
+            this.loginManager.setLoggedInUser(response.user);
             document.dispatchEvent(new CustomEvent("userLoggedIn", {detail: {user: response.user}}));
         }).catch(error => {
             console.error(error)
