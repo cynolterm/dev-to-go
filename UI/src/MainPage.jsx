@@ -25,7 +25,6 @@ class MainPage extends React.Component {
 
     handleLogin = (event) => {
         let newuser = this.loginManager.getLoggedInUser();
-        console.log(newuser);
         this.setState({loggedInUser: newuser});
     }
 

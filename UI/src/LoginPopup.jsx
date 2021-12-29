@@ -24,15 +24,10 @@ class LoginPopup extends React.Component {
     closePopup = () => {
         this.setState({popupClass: "dev-to-go-login-popup-closed"})
         this.props.openVariable = false;
-        console.log(`Username: ${this.state.username}`)
-        console.log(`Password: ${this.state.password}`)
     }
 
     componentDidUpdate = (props) => {
-        // console.log(this.props.openVariable);
-        // if (this.props.openVariable !== props.openVariable && this.props.openVariable === true) {
-        //     this.setState({popupClass: "dev-to-go-login-popup"})
-        // }
+
     }
 
     openPopup = () => {

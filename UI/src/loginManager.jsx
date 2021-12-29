@@ -21,7 +21,6 @@ export class LoginManager {
 
     setLoggedInUser = (user) => {
         this.loggedInUser = user;
-        console.log(this.loggedInUser);
     }
 
 }

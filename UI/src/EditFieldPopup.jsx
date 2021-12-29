@@ -25,7 +25,6 @@ class EditFieldPopup extends React.Component {
             data: $.param(putData),
             processData: false
         }).then(response => {
-            console.log(response);
             this.props.scb();
         }).catch(error => {
             console.error(error);

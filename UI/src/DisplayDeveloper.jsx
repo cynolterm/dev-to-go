@@ -8,7 +8,6 @@ class DisplayDeveloper extends React.Component {
 
     constructor(props) {
         super(props);
-        console.log(this.props.developer);
         this.userUrl = `/user?uid=${this.props.developer._id}`;
     }
 

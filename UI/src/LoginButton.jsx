@@ -16,7 +16,6 @@ class LoginButton extends React.Component{
     componentDidMount = () => {
         document.addEventListener("userLoggedIn", this.handleLogin);
         let user = this.loginManager.getLoggedInUser();
-        console.log(user);
         this.setState({user: user});
         if (user._id) {
             this.setState({buttontext: "Logout", profileUrl: `/user?uid=${user._id}`});
