@@ -41,7 +41,7 @@ class LoginPopup extends React.Component {
             data: $.param({username: this.state.username, password: this.state.password}),
             processData: false
         }).then(response => {
-            this.closePopup();
+            this.loginClicked();
         }).catch(error => {
             console.error(error);
         })
